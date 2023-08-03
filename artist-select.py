@@ -1,8 +1,6 @@
 import spotipy
 from spotipy.oauth2 import SpotifyOAuth
 import random
-import pretty_errors
-import pprint
 from os.path import exists
 
 # authorisation
@@ -38,8 +36,6 @@ if exists("artists-spotify.txt"):
         artists_file.append(artist_id_from_file.strip("\n"))
         artist_id_from_file = file.readline()
     file.close()
-
-pprint.pprint(artists_file)
 
 # give the user artists
 i = 0
